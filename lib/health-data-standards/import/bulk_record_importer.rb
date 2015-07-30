@@ -128,7 +128,7 @@ module HealthDataStandards
       end
 
       def self.import(xml_data, provider_map = {}, doc = Nokogiri::XML(xml_data))
-        record = self.import_and_return_record(xml_data, provider_map, doc)
+        record = self.import_and_return_unsaved_record(xml_data, provider_map, doc)
         record.save
       end
     end
